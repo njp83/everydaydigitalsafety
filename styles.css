@@ -1,0 +1,134 @@
+/* =========================
+   RESET (minimal)
+   ========================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  min-height: 100vh;
+  font-family: system-ui, -apple-system, "Segoe UI",
+               Roboto, Ubuntu, Cantarell, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* =========================
+   THEME VARIABLES
+   ========================= */
+
+:root {
+  /* Light mode (default) */
+  --bg: #ffffff;
+  --text: #1a1a1a;
+  --muted: #555555;
+  --primary: #2563eb;   /* calm blue */
+  --border: #e5e7eb;
+
+  --max-width: 70ch;
+  --space: 1rem;
+}
+
+/* Dark mode – automatic, no JS */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0f172a;
+    --text: #e5e7eb;
+    --muted: #94a3b8;
+    --primary: #60a5fa;
+    --border: #334155;
+  }
+}
+
+/* =========================
+   BASE ELEMENTS
+   ========================= */
+
+main {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: calc(var(--space) * 1.5);
+}
+
+h1, h2, h3 {
+  line-height: 1.25;
+  margin-bottom: 0.5em;
+}
+
+p {
+  margin-bottom: 1em;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+a:hover {
+  text-decoration-thickness: 2px;
+}
+
+/* =========================
+   LISTS & MEDIA
+   ========================= */
+
+ul, ol {
+  padding-left: 1.25em;
+  margin-bottom: 1em;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.25rem;
+}
+
+/* =========================
+   FORMS (simple & safe)
+   ========================= */
+
+input,
+button,
+textarea {
+  font: inherit;
+  padding: 0.5em;
+  border: 1px solid var(--border);
+  border-radius: 0.25rem;
+  background: var(--bg);
+  color: var(--text);
+}
+
+button {
+  cursor: pointer;
+}
+
+button:focus-visible,
+input:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+/* =========================
+   UTILITIES
+   ========================= */
+
+.center {
+  text-align: center;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.hidden {
+  display: none !important;
+}
