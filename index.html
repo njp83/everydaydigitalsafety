@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Basic -->
+  <meta charset="UTF-8">
+  <title>My Website</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Privacy-friendly defaults -->
+  <meta name="referrer" content="no-referrer">
+  <meta name="robots" content="index, follow">
+
+  <!-- Content Security Policy (works on GitHub Pages) -->
+  <meta http-equiv="Content-Security-Policy"
+        content="
+          default-src 'self';
+          img-src 'self' data:;
+          style-src 'self' 'unsafe-inline';
+          script-src 'self';
+          object-src 'none';
+          base-uri 'self';
+          form-action 'self';
+          frame-ancestors 'none';
+          upgrade-insecure-requests;
+        ">
+
+  <!-- Prevent MIME sniffing -->
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+
+  <!-- Prevent clickjacking -->
+  <meta http-equiv="X-Frame-Options" content="DENY">
+
+  <!-- Disable overly invasive browser features -->
+  <meta http-equiv="Permissions-Policy"
+        content="camera=(), microphone=(), geolocation=(), payment=()">
+
+  <!-- Basic styling (no external assets) -->
+  <style>
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      margin: 2rem;
+      line-height: 1.6;
+      max-width: 800px;
+    }
+    header, footer {
+      margin-bottom: 2rem;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Welcome</h1>
+    <p>Privacy-first website. No tracking. No cookies.</p>
+  </header>
+
+  <main>
+    <p>
+      This site is hosted on GitHub Pages and uses a secure, minimal setup.
+    </p>
+  </main>
+
+  <footer>
+    <small>
+      © <span id="year"></span> My Website
+    </small>
+  </footer>
+
+  <!-- Local, minimal JS only -->
+  <script>
+    document.getElementById('year').textContent =
+      new Date().getFullYear();
+  </script>
+</body>
+</html>
