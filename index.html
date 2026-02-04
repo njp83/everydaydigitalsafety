@@ -35,115 +35,117 @@
         content="camera=(), microphone=(), geolocation=(), payment=()">
 
   <!-- Basic styling (external assets) -->
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles_v3.css">
 </head>
 
 <body>
-  
-  <main>
 
-    <header>
+  <header>
+    <div class="header-text">
       <h1>Digital Safety Australia</h1>
-      <h2>Helping families stay safe and private online</h2>
-      <p class="muted">
-        Simple, independent guidance on online privacy, apps, and AI — written for kids, parents, and educators.
+      <p class="tagline">
+        Calm, independent guidance on online privacy for families, schools, and individuals.
       </p>
-    </header>
+    </div>
 
-    <section>
-      <p>
-        The internet changes fast, and it’s not always clear how new apps, games, and AI tools affect children’s privacy.
-        This site exists to explain those changes clearly, without fear-mongering, tracking, or technical jargon.
-      </p>
+    <img 
+      src="images/logo_1.png" 
+      alt="Digital Safety Australia logo" 
+      class="logo"
+    >
+  </header>
+
+
+  <nav>
+    <ul class="menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="protecting_kids.html">Protecting Your Kids</a></li>
+      <li><a href="protecting_yourself.html">Protecting Yourself</a></li>
+      <li><a href="news_alerts.html">News & Alerts</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+
+  <main class="home-layout">
+
+    <!-- MAIN COLUMN -->
+    <section class="home-main">
+
+      <section class="intro">
+        <p>
+          The internet changes quickly. New apps, platforms, and AI tools can affect privacy
+          in ways that aren’t always obvious.
+        </p>
+        <p>
+          This site explains what actually matters — in plain English, without tracking,
+          ads, or fear-based messaging.
+        </p>
+      </section>
+
+      <section class="paths">
+        <h2>Start here</h2>
+
+        <div class="path">
+          <h3>Protecting Your Kids</h3>
+          <p>Clear explanations for parents, carers, and schools.</p>
+          <a href="protecting_kids.html">Go to kids safety →</a>
+        </div>
+
+        <div class="path">
+          <h3>Protecting Yourself</h3>
+          <p>Privacy basics for adults using everyday technology.</p>
+          <a href="protecting_yourself.html">Go to personal privacy →</a>
+        </div>
+      </section>
+
+      <section class="trust">
+        <ul>
+          <li>No tracking</li>
+          <li>No ads</li>
+          <li>No cookies</li>
+          <li>Independent and plain-English</li>
+        </ul>
+      </section>
+
     </section>
 
-    <section>
-      <h3>Our mission</h3>
-      <p>
-        To explain online privacy in a calm, honest way — so families, schools, and young people can make informed
-        choices about the technology they use.
-      </p>
-      <ul>
-        <li>Understandable</li>
-        <li>Age-appropriate</li>
-        <li>Independent</li>
-        <li>Respectful of people’s data</li>
-      </ul>
-    </section>
+    <!-- SIDEBAR -->
+    <aside class="home-sidebar">
 
-    <section>
-      <h3>This site is for</h3>
-      <ul>
-        <li>Parents trying to understand apps, social media, and AI tools</li>
-        <li>Teachers and schools looking for clear, neutral explanations</li>
-        <li>Kids and teens who want to learn how the internet works</li>
-        <li>Anyone who cares about privacy but isn’t technical</li>
-      </ul>
-    </section>
+      <h2>Latest alerts</h2>
 
-    <section>
-      <h3>What we cover</h3>
-      <ul>
-        <li>Plain-English explanations of popular apps and platforms</li>
-        <li>How AI tools collect and use data</li>
-        <li>Online privacy basics for kids and teens</li>
-        <li>Guidance for families and schools</li>
-        <li>Curated news that actually affects children and education</li>
-      </ul>
-    </section>
+      <article class="alert">
+        <img src="placeholder.jpg" alt="">
+        <a href="#">New AI tools in classrooms — what parents should know</a>
+      </article>
 
-    <section>
-      <h3>Privacy news that matters</h3>
-      <p class="muted">
-        We link only to articles that are relevant to families, schools, and young people.
-      </p>
-      <ul>
-        <li><a href="#">New AI tools in classrooms — what parents should know</a></li>
-        <li><a href="#">Major platform updates its child privacy settings</a></li>
-        <li><a href="#">Education guidance on online safety and data use</a></li>
-      </ul>
-    </section>
+      <article class="alert">
+        <img src="placeholder.jpg" alt="">
+        <a href="#">Major platform updates child privacy settings</a>
+      </article>
 
-    <section>
-      <h3>Our privacy promise</h3>
-      <ul>
-        <li>No tracking</li>
-        <li>No cookies</li>
-        <li>No ads</li>
-        <li>No analytics</li>
-        <li>No external fonts or scripts</li>
-      </ul>
-      <p>
-        We do not collect personal information.
-      </p>
-    </section>
+      <article class="alert">
+        <img src="placeholder.jpg" alt="">
+        <a href="#">Education guidance on online safety and data use</a>
+      </article>
 
-    <section>
-      <h3>Looking ahead</h3>
-      <p>
-        In the future, this site may offer printable guides and practical tools for families and schools.
-        Any future resources will remain independent and privacy-respecting.
-      </p>
-    </section>
+      <a class="more-link" href="news_alerts.html">
+        View all alerts →
+      </a>
 
-    <footer class="muted">
-      <p>
-        <strong>About</strong><br>
-        Independent guidance on online privacy and technology for families and educators.
-      </p>
-
-      <p>
-        <strong>Privacy</strong><br>
-        This website does not track visitors or collect personal data.
-      </p>
-
-      <p>
-        Last updated: February 2026
-      </p>
-    </footer>
+    </aside>
 
   </main>
 
+  <footer>
+    <p>
+      Independent guidance on online privacy and technology.<br>
+      No tracking. No data collection.
+    </p>
+    <p class="muted">
+      Last updated: February 2026
+    </p>
+  </footer>
+
 </body>
 </html>
-
