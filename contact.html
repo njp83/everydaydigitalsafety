@@ -4,54 +4,24 @@
   <meta charset="UTF-8">
   <title>Netlify Form Test</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- Content Security Policy (Netlify Forms compatible) -->
-  <meta http-equiv="Content-Security-Policy"
-    content="
-      default-src 'self';
-      img-src 'self' data:;
-      style-src 'self' 'unsafe-inline';
-      script-src 'self';
-      object-src 'none';
-      base-uri 'self';
-      form-action 'self' https://digitalsafety.netlify.app https://*.netlify.app https://*.netlify.com;
-      frame-ancestors 'none';
-      upgrade-insecure-requests;
-    ">
 </head>
 
 <body>
 
   <h1>Contact</h1>
 
-  <form
-    name="contact"
-    method="POST"
-    data-netlify="true"
-    netlify-honeypot="bot-field"
-  >
-    <!-- Required hidden input for Netlify -->
+  <form name="contact" method="POST" data-netlify="true">
     <input type="hidden" name="form-name" value="contact">
 
-    <!-- Honeypot (spam protection) -->
-    <p hidden>
-      <label>
-        Don’t fill this out:
-        <input name="bot-field">
+    <p>
+      <label>Email:
+        <input type="email" name="email" required>
       </label>
     </p>
 
     <p>
-      <label>
-        Email:<br>
-        <input type="email" name="email" required autocomplete="email">
-      </label>
-    </p>
-
-    <p>
-      <label>
-        Message:<br>
-        <textarea name="message" required rows="6"></textarea>
+      <label>Message:
+        <textarea name="message" required></textarea>
       </label>
     </p>
 
@@ -60,4 +30,3 @@
 
 </body>
 </html>
-
