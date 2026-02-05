@@ -1,136 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Basic -->
   <meta charset="UTF-8">
-  <title>Digital Safety Australia – Contact</title>
+  <title>Netlify Form Test</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- Privacy-friendly defaults -->
-  <meta name="referrer" content="no-referrer">
-  <meta name="robots" content="index, follow">
-
-  <!-- Content Security Policy (Netlify Forms compatible) -->
-  <meta http-equiv="Content-Security-Policy"
-        content="
-          default-src 'self';
-          img-src 'self' data:;
-          style-src 'self' 'unsafe-inline';
-          script-src 'self';
-          object-src 'none';
-          base-uri 'self';
-          form-action 'self' https://*.netlify.app https://*.netlify.com;
-          frame-ancestors 'none';
-          upgrade-insecure-requests;
-        ">
-
-  <!-- Security headers -->
-  <meta http-equiv="X-Content-Type-Options" content="nosniff">
-  <meta http-equiv="X-Frame-Options" content="DENY">
-  <meta http-equiv="Permissions-Policy"
-        content="camera=(), microphone=(), geolocation=(), payment=()">
-
-  <!-- Styles -->
-  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-  <header>
-    <div class="header-text">
-      <h1>Digital Safety Australia</h1>
-      <p class="tagline">
-        Calm, independent guidance on online privacy for families, schools, and individuals.
-      </p>
-    </div>
+  <h1>Contact</h1>
 
-    <img
-      src="images/logo_1.png"
-      alt="Digital Safety Australia logo"
-      class="logo">
-  </header>
+  <form
+    name="contact"
+    method="POST"
+    data-netlify="true"
+    netlify-honeypot="bot-field"
+  >
+    <!-- Required hidden input -->
+    <input type="hidden" name="form-name" value="contact">
 
-  <nav>
-    <ul class="menu">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="protecting_kids.html">Protecting Your Kids</a></li>
-      <li><a href="protecting_yourself.html">Protecting Yourself</a></li>
-      <li><a href="news_alerts.html">News & Alerts</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html" aria-current="page">Contact</a></li>
-      <li><a href="privacy_policy.html">Privacy Policy</a></li>
-    </ul>
-  </nav>
+    <!-- Honeypot -->
+    <p hidden>
+      <label>
+        Don’t fill this out:
+        <input name="bot-field">
+      </label>
+    </p>
 
-  <main class="home-layout">
-
-    <section class="contact-section">
-      <h2>Contact</h2>
-
-      <p class="muted">
-        Use this form to get in touch. We only collect what’s needed to reply.
-      </p>
-
-      <form
-        name="contact"
-        method="POST"
-        action="/contact-success.html"
-        data-netlify="true"
-        netlify-honeypot="bot-field"
-      >
-        <!-- Required for Netlify -->
-        <input type="hidden" name="form-name" value="contact">
-
-        <!-- Honeypot field -->
-        <p class="hidden">
-          <label>
-            Don’t fill this out:
-            <input name="bot-field">
-          </label>
-        </p>
-
-        <div class="form-field">
-          <label for="email">Email address</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            required
-            autocomplete="email"
-            maxlength="254">
-        </div>
-
-        <div class="form-field">
-          <label for="message">Message</label>
-          <textarea
-            id="message"
-            name="message"
-            rows="6"
-            required
-            maxlength="2000"></textarea>
-        </div>
-
-        <button type="submit">Send message</button>
-      </form>
-
-      <p class="form-note">
-        We use this information only to respond to your message.
-        Please don’t include passwords, medical, or other sensitive personal details.
-      </p>
-    </section>
-
-  </main>
-
-  <footer>
     <p>
-      Independent guidance on online privacy and technology.<br>
-      No tracking. No data collection.
+      <label>
+        Email:
+        <input type="email" name="email" required>
+      </label>
     </p>
-    <p class="muted">
-      Last updated: February 2026
+
+    <p>
+      <label>
+        Message:
+        <textarea name="message" required></textarea>
+      </label>
     </p>
-  </footer>
+
+    <button type="submit">Send</button>
+  </form>
 
 </body>
 </html>
-
